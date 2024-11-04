@@ -1,0 +1,8 @@
+name: Dump
+on: push
+jobs:
+  debug:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4 # ローカルアクション呼び出し前にチェックアウト
+      - uses: ./.github/actions/dump/ # ローカルアクションの呼び出し
